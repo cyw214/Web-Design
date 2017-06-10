@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-1.5.0.mobile.min.css">
+		<style>
+		/* For avoiding title truncation in wp8 */
+		.ui-header .ui-title {
+				overflow: visible !important;
+		}
+	       position: relative !important;
+		}
+		</style>
+
+        <title>Juggle</title>
+    </head>
+    <body>
+
+        <div data-role="page">
+            <div id="game_title" data-role="header">                
+                <span id="green">J</span>
+                <span id="red">u</span>
+                <span id="purple">g</span>
+                <span id="blue">g</span>
+                <span id="grey">l</span>
+                <span id="pink">e</span>
+            </div>
+            <div id="content" data-role="main" class="ui-content">
+                <canvas id="canvas" width="600px" height="500px"></canvas>
+            </div>
+            
+            <div data-role="footer">
+                <span id="balls">  Balls:   <span id="ballcount"></span></span> 
+                <span id="bounces">Bounces: <span id="bouncecount"></span></span> 
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
+        <script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
+        <script type="text/javascript" src="js/Game.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
