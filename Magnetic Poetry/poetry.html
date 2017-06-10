@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+Name: Charles Wallace
+Email: cyw214@lehigh.edu
+Assignment: Home Work 5
+-->
+<html>
+    <head>
+        <title>Magnetic Poetry</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+           * {
+                background-color: black;
+           }
+           button {
+
+                border: 1px solid black;
+                text-align: center;
+                font-weight: bold;
+                background-color: white;
+                -webkit-user-select: none;   
+                -moz-user-select: none;      
+                -ms-user-select: none;
+            }
+            #create{
+                background-color:white;
+            }
+            #submit{
+                background-color: lightgray;
+            }
+
+        </style>
+    </head>
+    <body>
+
+            <input type="submit" value="Add Word" onclick="createButton()" id="submit"/>
+            <input type="text" id="create"/>
+            </br>
+            <button id="1" type="button" onmousedown="move(event)">Ode</button>
+            <button id="2" type="button" onmousedown="move(event)">and</button>
+            <button id="3" type="button" onmousedown="move(event)">Create</button>
+            <button id="4" type="button" onmousedown="move(event)">Dwell</button>
+            <button id="5" type="button" onmousedown="move(event)">A</button>
+            <button id="6" type="button" onmousedown="move(event)">Sunrise</button>
+            <button id="7" type="button" onmousedown="move(event)">Red</button>
+            <button id="8" type="button" onmousedown="move(event)">The</button>
+            <button id="9" type="button" onmousedown="move(event)">On</button>
+            <button id="10" type="button" onmousedown="move(event)">Because</button>
+            <button id="11" type="button" onmousedown="move(event)">Amuse</button>
+            <button id="12" type="button" onmousedown="move(event)">Muse</button>
+            <button id="13" type="button" onmousedown="move(event)">Reflection</button>
+            <button id="14" type="button" onmousedown="move(event)">After</button>
+            <button id="15" type="button" onmousedown="move(event)">To</button>
+
+
+
+     
+
+
+
+    <script type="text/javascript">
+            var buttoncounter = 16;
+            var addbuttontext;
+            var docElem;
+
+
+            function createButton() {
+                var word = document.getElementById("create").value;
+                if(word != ""){
+                var btn = document.createElement("BUTTON");
+                document.body.appendChild(btn);
+                buttoncounter = buttoncounter + 1;
+                btn.setAttribute("id", buttoncounter);
+                btn.setAttribute("onmousedown", "move(event)");
+                btn.setAttribute("type", "button");
+                btn.innerHTML = word;
+                document.getElementById("create").value = "";
+                }
+            }
+           
+            function move(event){
+                docElem = document.getElementById(event.target.id);
+                docElem.style.position = 'absolute';
+                docElem.style.color = "black";
+                var height = parseFloat(docElem.offsetHeight, 10);
+                var width = parseFloat(docElem.offsetWidth, 10);
+                docElem.onmousemove = function(event){
+                    docElem.style.top =  event.clientY - (height/2) + 'px';
+                    docElem.style.left = event.clientX - (width/2) + 'px';
+                }
+                docElem.onmouseup = function() {
+                    docElem.onmousemove = null;
+                }
+            }
+        </script>
+    </body>
+</html>
