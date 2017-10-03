@@ -13,3 +13,6 @@
   Maximize the number of bounces within a game. As more balls are introduced the speed of the divided paddle's drift
   gradually increases along with the speed of the bouncing balls.
 
+[Play It](https://cyw214.github.io/Web-Design/Juggle/)
+
+Note: You may want to resize the screen to a smaller size for a better experience, there are some issues that need to be worked out to scale game play on different screen sizes.
